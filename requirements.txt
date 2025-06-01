@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+transformers==4.39.3
+torch
+Pillow
+accelerate
+bitsandbytes
+python-multipart
+sqlalchemy
+python-dotenv
+fastapi-mail
+passlib[bcrypt]
+whisper
+pydub ffmpeg-python
