@@ -1,0 +1,18 @@
+fastapi
+uvicorn[standard]
+python-jose[cryptography]
+passlib[bcrypt]
+pydantic
+openai-whisper
+torch
+torchvision
+Pillow
+requests
+sentencepiece
+protobuf
+accelerate
+bitsandbytes
+
+# Numba needs a specific numpy version, so we constrain it here.
+numpy<2.3
+numba

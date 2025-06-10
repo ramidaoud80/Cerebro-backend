@@ -64,7 +64,7 @@ async def image_query(file: UploadFile = File(...), current_user: str = Depends(
             contents=[{
                 "role": "user",
                 "parts": [
-                    {"text": "Please analyze this image and describe any findings in 3 -5 lines."},
+                    {"text": "Please analyze this image and describe any findings in 1 line , straight to diagnosis."},
                     {"inline_data": {"mime_type": "image/jpeg", "data": base64_image}}
                 ]
             }]
@@ -92,8 +92,7 @@ async def voice_query(file: UploadFile = File(...), current_user: str = Depends(
         )
 
         return {
-            "transcription": transcription,
-            "response": response.text.strip()
+            "response": response.text.strip()+"in 2 lines",
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Gemini voice query error: {e}")
